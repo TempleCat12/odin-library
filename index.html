@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Odin Library</title>
+  </head>
+  <body>
+    <div id="container">
+      <div id="header">
+        <h1>Privacy Library</h1>
+        <button type="button" onclick="showOrCloseForm()">Add New Book</button>
+        <form>
+          <p>Add Book</p>
+          <svg onclick="showOrCloseForm()" style="width: 20px; height: 20px" viewBox="0 0 24 24">
+            <path
+              fill="currentColor"
+              d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
+            />
+          </svg>
+          <div>
+            <label for="title">Title: </label
+            ><input
+              type="text"
+              id="title"
+              name="title"
+              placeholder="Book name"
+              required
+              minlength="1"
+              maxlength="200"
+            />
+
+            <label for="name">Name: </label
+            ><input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Author name"
+              required
+              minlength="1"
+              maxlength="100"
+            />
+            <label for="pages">Pages: </label
+            ><input
+              type="number"
+              id="pages"
+              name="pages"
+              placeholder="Book total pages"
+              required
+              min="0"
+              max="1000"
+            />
+          </div>
+          <div>
+            <label for="isRead">I've already read this book</label
+            ><input type="radio" id="isRead" name="isRead" />
+          </div>
+          <button>Confirm</button>
+        </form>
+      </div>
+      <div id="content">
+        <h2>book list</h2>
+        <div style="display: none">
+          <h3>title</h3>
+          <button class="readBtn">read</button>
+          <button class="removeBtn">remove</button>
+        </div>
+      </div>
+      <div id="footer"></div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
