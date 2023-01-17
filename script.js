@@ -1,21 +1,42 @@
 // Object constructor
-function Book(title, name, pages, isRead = false) {
-  //TODO : set id for access book object
-  (this.index = 0),
-    (this.title = title),
-    (this.name = name),
-    (this.pages = Number.parseInt(pages)),
-    (this.isRead = isRead);
-}
+// function Book(title, name, pages, isRead = false) {
+//   //TODO : set id for access book object
+//   (this.index = 0),
+//     (this.title = title),
+//     (this.name = name),
+//     (this.pages = Number.parseInt(pages)),
+//     (this.isRead = isRead);
+// }
 
-function Library() {
-  (this.books = []),
-    (this.addBook = function (newBook) {
-      this.books.push(newBook);
-    });
-  this.removeBook = function (index) {
-    this.books.splice(index, 1);
-  };
+// function Library() {
+//   (this.books = []),
+//     (this.addBook = function (newBook) {
+//       this.books.push(newBook);
+//     });
+//   this.removeBook = function (index) {
+//     this.books.splice(index, 1);
+//   };
+// }
+
+// Class
+class Book {
+  constructor(title, name, pages, isRead = false) {
+    this.title = title;
+    this.name = name;
+    this.pages = pages;
+    this.isRead = isRead;
+  }
+}
+class Library {
+  constructor() {
+    this.books = [];
+  }
+  addBook(newBook) {
+    this.books.push();
+  }
+  removeBook(index) {
+    this.splice(index, 1);
+  }
 }
 
 // Data
